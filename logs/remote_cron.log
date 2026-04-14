@@ -1,0 +1,47 @@
+[1] Checking if script exists on Ubuntu...
+[✓] Script found on Ubuntu
+[2] Running audit script on Ubuntu...
+
+[1;36m=========================================[0m
+[1;36m     SYSTEM REPORT - AUTO SEND[0m
+[1;36m=========================================[0m
+Date: Mon Apr 13 04:52:00 PM CET 2026
+
+[1;36m✓ Short HTML report saved to: reports/short_report_20260413_165200.html[0m
+[1;36m✓ Full HTML report saved to: reports/full_report_20260413_165200.html[0m
+
+Sending reports via email...
+-----------------------------------------
+Sending to: fatehhammiche7@gmail.com
+[32m✓ Short report sent to fatehhammiche7@gmail.com[0m
+[32m✓ Full report sent to fatehhammiche7@gmail.com[0m
+
+[1;36m=========================================[0m
+[32m✓ All reports sent successfully![0m
+[1;36m=========================================[0m
+[✓] Audit script executed successfully
+[3] Copying reports from Ubuntu to Kali...
+[✓] Reports saved to: /home/fateh/project/remote_reports/
+total 308
+drwxrwxr-x 2 fateh fateh  4096 Apr 13 16:52 .
+drwxrwxr-x 7 fateh fateh  4096 Apr 13 16:52 ..
+-rw-rw-r-- 1 fateh fateh 17027 Apr 13 16:52 full_report_20260328_133712.html
+-rw-rw-r-- 1 fateh fateh 17019 Apr 13 16:52 full_report_20260328_134122.html
+-rw-rw-r-- 1 fateh fateh 17017 Apr 13 16:52 full_report_20260328_134537.html
+-rw-rw-r-- 1 fateh fateh 17033 Apr 13 16:52 full_report_20260328_135133.html
+-rw-rw-r-- 1 fateh fateh 17683 Apr 13 16:52 full_report_20260328_172630.html
+-rw-rw-r-- 1 fateh fateh 17717 Apr 13 16:52 full_report_20260413_004458.html
+-rw-rw-r-- 1 fateh fateh 17707 Apr 13 16:52 full_report_20260413_004808.html
+-rw-rw-r-- 1 fateh fateh 17681 Apr 13 16:52 full_report_20260413_163350.html
+-rw-rw-r-- 1 fateh fateh 17678 Apr 13 16:52 full_report_20260413_165200.html
+-rw-rw-r-- 1 fateh fateh  8453 Apr 13 16:52 short_report_20260328_133553.html
+-rw-rw-r-- 1 fateh fateh  8476 Apr 13 16:52 short_report_20260328_133712.html
+-rw-rw-r-- 1 fateh fateh  8476 Apr 13 16:52 short_report_20260328_134122.html
+-rw-rw-r-- 1 fateh fateh  8492 Apr 13 16:52 short_report_20260328_134537.html
+-rw-rw-r-- 1 fateh fateh  8474 Apr 13 16:52 short_report_20260328_135133.html
+-rw-rw-r-- 1 fateh fateh  8433 Apr 13 16:52 short_report_20260328_172630.html
+-rw-rw-r-- 1 fateh fateh  8467 Apr 13 16:52 short_report_20260413_004458.html
+-rw-rw-r-- 1 fateh fateh  8467 Apr 13 16:52 short_report_20260413_004808.html
+-rw-rw-r-- 1 fateh fateh  8455 Apr 13 16:52 short_report_20260413_163350.html
+-rw-rw-r-- 1 fateh fateh  8454 Apr 13 16:52 short_report_20260413_165200.html
+[✓] Remote audit completed at Mon Apr 13 04:52:19 PM CET 2026

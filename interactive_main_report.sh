@@ -1,0 +1,446 @@
+#!/bin/bash
+
+# Source the hardware and software files
+#source ./hardware.sh
+#source ./software.sh
+
+# Colors for terminal only
+BOLD_CYAN="\e[1;36m"
+BG_WHITE="\e[47m"
+NC="\e[0m"
+
+# Variables for report files
+SHORT_REPORT="reports2/short_report_$(date +%Y%m%d_%H%M%S).html"
+FULL_REPORT="reports2/full_report_$(date +%Y%m%d_%H%M%S).html"
+
+# Function to generate HTML header
+html_header() {
+    local title="$1"
+    cat << EOF
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>$title - $(date)</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+        
+        .header p {
+            opacity: 0.9;
+            font-size: 14px;
+        }
+        
+        .content {
+            padding: 30px;
+        }
+        
+        .section {
+            margin-bottom: 30px;
+            background: #f8f9fa;
+            border-radius: 10px;
+            overflow: hidden;
+            border-left: 4px solid #667eea;
+        }
+        
+        .section-title {
+            background: #e9ecef;
+            padding: 15px 20px;
+            font-size: 20px;
+            font-weight: bold;
+            color: #495057;
+            border-bottom: 2px solid #dee2e6;
+        }
+        
+        .section-content {
+            padding: 20px;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+        
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #dee2e6;
+        }
+        
+        th {
+            background: #667eea;
+            color: white;
+            font-weight: 600;
+        }
+        
+        tr:hover {
+            background: #f1f3f5;
+        }
+        
+        .alert {
+            background: #ff4757;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+        
+        .success {
+            background: #00b894;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+        
+        .info-box {
+            background: #e3f2fd;
+            border-left: 4px solid #2196f3;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 5px;
+        }
+        
+        .footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 12px;
+        }
+        
+        .badge {
+            display: inline-block;
+            padding: 3px 8px;
+            border-radius: 3px;
+            font-size: 12px;
+            font-weight: bold;
+        }
+        
+        .badge-success {
+            background: #00b894;
+            color: white;
+        }
+        
+        .badge-warning {
+            background: #ffa502;
+            color: white;
+        }
+        
+        .badge-danger {
+            background: #ff4757;
+            color: white;
+        }
+        
+        pre {
+            background: #2d3436;
+            color: #dfe6e9;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+            font-family: 'Courier New', monospace;
+            font-size: 13px;
+        }
+        
+        .metric {
+            display: inline-block;
+            padding: 5px 10px;
+            margin: 5px;
+            background: #e9ecef;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>$title</h1>
+            <p>Generated on: $(date '+%Y-%m-%d %H:%M:%S')</p>
+            <p>Hostname: $(hostname)</p>
+        </div>
+        <div class="content">
+EOF
+}
+
+# Function to generate HTML footer
+html_footer() {
+    cat << EOF
+        </div>
+        <div class="footer">
+            <p>System Report | Generated by Automation Tool</p>
+            <p>© $(date +%Y) All Rights Reserved</p>
+        </div>
+    </div>
+</body>
+</html>
+EOF
+}
+
+# Function to generate short HTML report
+generate_short_report() {
+    mkdir -p reports
+    
+    {
+        html_header "SHORT SYSTEM REPORT"
+        
+        cat << EOF
+            <div class="section">
+                <div class="section-title">📊 CPU Information</div>
+                <div class="section-content">
+                    <pre>$(lscpu | head -5)</pre>
+                </div>
+            </div>
+            
+            <div class="section">
+                <div class="section-title">💾 Memory Usage</div>
+                <div class="section-content">
+                    <table>
+                        $(free -h | awk 'NR==1 {print "<tr><th>"$1"</th><th>"$2"</th><th>"$3"</th><th>"$4"</th></tr>"} NR==2 {print "<tr><td>"$1"</td><td>"$2"</td><td>"$3"</td><td>"$4"</td></tr>"}')
+                    </table>
+                </div>
+            </div>
+            
+            <div class="section">
+                <div class="section-title">💿 Disk Usage</div>
+                <div class="section-content">
+                    <table>
+                        $(df -h | head -5 | awk 'NR==1 {print "<tr><th>"$1"</th><th>"$2"</th><th>"$3"</th><th>"$4"</th><th>"$5"</th><th>"$6"</th></tr>"} NR>1 {print "<tr><td>"$1"</td><td>"$2"</td><td>"$3"</td><td>"$4"</td><td>"$5"</td><td>"$6"</td></tr>"}')
+                    </table>
+                </div>
+            </div>
+EOF
+        
+        html_footer
+    } > "$SHORT_REPORT"
+    
+    echo -e "${BOLD_CYAN}✓ Short HTML report saved to: $SHORT_REPORT${NC}"
+}
+
+# Function to generate full HTML report
+generate_full_report() {
+    mkdir -p reports
+    
+    # Get CPU info for alert
+    CPU_USAGE=$(top -bn1 | grep "Cpu(s)" | awk '{print 100 - $8}' | cut -d'.' -f1)
+    
+    {
+        html_header "FULL SYSTEM REPORT"
+        
+        # CPU Alert if needed
+        if [ "$CPU_USAGE" -gt 80 ]; then
+            cat << EOF
+            <div class="alert">
+                ⚠️ ALERT: CPU usage is high! ($CPU_USAGE%)
+            </div>
+EOF
+        else
+            cat << EOF
+            <div class="success">
+                ✓ CPU usage is normal ($CPU_USAGE%)
+            </div>
+EOF
+        fi
+        
+        # Hardware Section
+        cat << EOF
+            <div class="section">
+                <div class="section-title">🖥️ HARDWARE INFORMATION</div>
+                <div class="section-content">
+EOF
+        
+        # CPU Info
+        cat << EOF
+                    <h3>🔹 CPU</h3>
+                    <pre>$(lscpu | head -5)</pre>
+                    
+                    <h3>🔹 CPU USAGE</h3>
+                    <div class="info-box">
+                        Current Usage: <strong>$CPU_USAGE%</strong>
+                    </div>
+                    
+                    <h3>🔹 RAM</h3>
+                    <table>
+                        $(free -h | awk 'NR==1 {print "<tr><th>"$1"</th><th>"$2"</th><th>"$3"</th><th>"$4"</th><th>"$5"</th><th>"$6"</th></tr>"} NR==2 {print "<tr><td>"$1"</td><td>"$2"</td><td>"$3"</td><td>"$4"</td><td>"$5"</td><td>"$6"</td></tr>"}')
+                    </table>
+                    
+                    <h3>🔹 DISK</h3>
+                    <table>
+                        $(df -h | head -5 | awk 'NR==1 {print "<tr><th>"$1"</th><th>"$2"</th><th>"$3"</th><th>"$4"</th><th>"$5"</th><th>"$6"</th></tr>"} NR>1 {print "<tr><td>"$1"</td><td>"$2"</td><td>"$3"</td><td>"$4"</td><td>"$5"</td><td>"$6"</td></tr>"}')
+                    </table>
+                    
+                    <h3>🔹 NETWORK</h3>
+                    <pre>$(ip a | grep inet)</pre>
+                </div>
+            </div>
+EOF
+        
+        # Software Section
+        cat << EOF
+            <div class="section">
+                <div class="section-title">💻 SOFTWARE INFORMATION</div>
+                <div class="section-content">
+                    <h3>🔹 SYSTEM</h3>
+                    <pre>$(uname -a)</pre>
+                    
+                    <h3>🔹 USERS</h3>
+                    <pre>$(w)</pre>
+                    <div class="info-box">
+                        Number of users: <strong>$(w | head -1 | awk '{print $4}')</strong>
+                    </div>
+                    
+                    <h3>🔹 TOP PROCESSES</h3>
+                    <table>
+                        $(ps aux --sort=-%cpu | head -10 | awk 'NR==1 {print "<tr><th>"$1"</th><th>"$2"</th><th>"$3"</th><th>"$4"</th><th>"$11"</th></tr>"} NR>1 {print "<tr><td>"$1"</td><td>"$2"</td><td>"$3"</td><td>"$4"</td><td>"$11"</td></tr>"}')
+                    </table>
+                </div>
+            </div>
+EOF
+        
+        html_footer
+    } > "$FULL_REPORT"
+    
+    echo -e "${BOLD_CYAN}✓ Full HTML report saved to: $FULL_REPORT${NC}"
+}
+
+# Function to send HTML email
+send_email() {
+    local recipient="$1"
+    local report_type="$2"
+    local report_file="$3"
+    
+    if [ -f "$report_file" ]; then
+        {
+            echo "MIME-Version: 1.0"
+            echo "Content-Type: text/html; charset=utf-8"
+            echo "Subject: System Report - $report_type ($(date '+%Y-%m-%d %H:%M'))"
+            echo "From: system@$(hostname)"
+            echo "To: $recipient"
+            echo
+            cat "$report_file"
+        } | msmtp "$recipient"
+        
+        echo -e "${GREEN}✓ $report_type report sent to $recipient${NC}"
+    else
+        echo -e "${RED}✗ Report file not found: $report_file${NC}"
+    fi
+}
+
+# Function to open report in browser
+open_report() {
+    local report_file="$1"
+    if [ -f "$report_file" ]; then
+        xdg-open "$report_file" 2>/dev/null || firefox "$report_file" 2>/dev/null || google-chrome "$report_file" 2>/dev/null || echo "Please open manually: $report_file"
+    fi
+}
+
+# Main menu
+main() {
+    while true; do
+        echo ""
+        echo -e "${BOLD_CYAN}=========================================${NC}"
+        echo -e "${BOLD_CYAN}       SYSTEM REPORT TOOL (HTML)${NC}"
+        echo -e "${BOLD_CYAN}=========================================${NC}"
+        echo "1) Generate short HTML report"
+        echo "2) Generate full HTML report"
+        echo "3) Generate both reports"
+        echo "4) Send short report via email"
+        echo "5) Send full report via email"
+        echo "6) Send both reports via email"
+        echo "7) View last short report in browser"
+        echo "8) View last full report in browser"
+        echo "9) Exit"
+        echo -e "${BOLD_CYAN}=========================================${NC}"
+        read -p "Choose an option (1-9): " option
+        
+        case $option in
+            1)
+                generate_short_report
+                echo -e "${GREEN}✓ Report generated!${NC}"
+                ;;
+            2)
+                generate_full_report
+                echo -e "${GREEN}✓ Report generated!${NC}"
+                ;;
+            3)
+                generate_short_report
+                generate_full_report
+                echo -e "${GREEN}✓ Both reports generated!${NC}"
+                ;;
+            4)
+                generate_short_report
+                read -p "Enter email address: " email
+                send_email "$email" "Short" "$SHORT_REPORT"
+                ;;
+            5)
+                generate_full_report
+                read -p "Enter email address: " email
+                send_email "$email" "Full" "$FULL_REPORT"
+                ;;
+            6)
+                generate_short_report
+                generate_full_report
+                read -p "Enter email address: " email
+                send_email "$email" "Short" "$SHORT_REPORT"
+                send_email "$email" "Full" "$FULL_REPORT"
+                ;;
+            7)
+                if [ -f "$SHORT_REPORT" ]; then
+                    open_report "$SHORT_REPORT"
+                else
+                    echo -e "${YELLOW}No short report found. Generate one first.${NC}"
+                fi
+                ;;
+            8)
+                if [ -f "$FULL_REPORT" ]; then
+                    open_report "$FULL_REPORT"
+                else
+                    echo -e "${YELLOW}No full report found. Generate one first.${NC}"
+                fi
+                ;;
+            9)
+                echo -e "${GREEN}Exiting...${NC}"
+                exit 0
+                ;;
+            *)
+                echo -e "${RED}Invalid option! Please choose 1-9${NC}"
+                ;;
+        esac
+    done
+}
+
+# Run main function
+main

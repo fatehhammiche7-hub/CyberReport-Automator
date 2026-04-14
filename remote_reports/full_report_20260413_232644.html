@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FULL SYSTEM REPORT - Mon Apr 13 11:26:46 PM CET 2026</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+        
+        .header p {
+            opacity: 0.9;
+            font-size: 14px;
+        }
+        .designer {
+        text-align : left;
+        }
+        
+        .content {
+            padding: 30px;
+        }
+        
+        .section {
+            margin-bottom: 30px;
+            background: #f8f9fa;
+            border-radius: 10px;
+            overflow: hidden;
+            border-left: 4px solid #667eea;
+        }
+        
+        .section-title {
+            background: #e9ecef;
+            padding: 15px 20px;
+            font-size: 20px;
+            font-weight: bold;
+            color: #495057;
+            border-bottom: 2px solid #dee2e6;
+        }
+        
+        .section-content {
+            padding: 20px;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+        
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #dee2e6;
+        }
+        
+        th {
+            background: #667eea;
+            color: white;
+            font-weight: 600;
+        }
+        
+        tr:hover {
+            background: #f1f3f5;
+        }
+        
+        .alert {
+            background: #ff4757;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+        
+        .success {
+            background: #00b894;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+        
+        .info-box {
+            background: #e3f2fd;
+            border-left: 4px solid #2196f3;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 5px;
+        }
+        
+        .footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 12px;
+        }
+        
+        pre {
+            background: #2d3436;
+            color: #dfe6e9;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+            font-family: 'Courier New', monospace;
+            font-size: 13px;
+        }
+            @media print {
+        body {
+            background: white;
+            padding: 0;
+        }
+        .header {
+            background: #2c3e50;
+            -webkit-print-color-adjust: exact;
+            print-color-adjust: exact;
+        }
+        .alert, .success, .info-box {
+            border: 1px solid #ccc;
+            background: #f9f9f9;
+            color: black;
+        }
+        pre {
+            background: #f4f4f4;
+            color: black;
+            border: 1px solid #ddd;
+        }
+
+    }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>FULL SYSTEM REPORT</h1>
+            <p><strong>Generated on:</strong> 2026-04-13 23:26:46</p>
+            <p><strong>Hostname:</strong> ubuntu24</p>
+            <div class="designer">
+                <p><strong>Designed by :</strong></p>
+                <ul>
+                <li><em>Hammiche Fateh</em></li>
+                <li><em>Belarmas Abdelouahab</em></li>
+                </ul>
+            </div>
+        </div>
+        <div class="content">
+<div class="success">✅ CPU usage is normal (42.06%)</div>
+            <!-- SYSTEM OVERVIEW -->
+            <div class="section">
+                <div class="section-title">📊 SYSTEM OVERVIEW</div>
+                <div class="section-content">
+                    <table>
+                        <tr><th>OS</th><td>Ubuntu 24.04.4 LTS</td></tr>
+                        <tr><th>Kernel</th><td>6.17.0-19-generic</td></tr>
+                        <tr><th>Architecture</th><td>x86_64</td></tr>
+                        <tr><th>Hostname</th><td>ubuntu24</td></tr>
+                        <tr><th>Uptime</th><td>0 hours, 0 minutes</td></tr>
+                        <tr><th>Last Boot</th><td>2026-04-13 23:26</td></tr>
+                        <tr><th>Load Average</th><td> 2.46, 0.54, 0.18</td></tr>
+                    </table>
+                </div>
+            </div>
+            
+            <!-- HARDWARE INFORMATION -->
+            <div class="section">
+                <div class="section-title">🖥️ HARDWARE INFORMATION</div>
+                <div class="section-content">
+                    <h3>🔹 CPU</h3>
+                    <pre>Architecture:                            x86_64
+CPU op-mode(s):                          32-bit, 64-bit
+Address sizes:                           48 bits physical, 48 bits virtual
+Byte Order:                              Little Endian
+CPU(s):                                  4
+On-line CPU(s) list:                     0-3
+Vendor ID:                               AuthenticAMD
+Model name:                              AMD Ryzen 7 PRO 5850U with Radeon Graphics
+CPU family:                              25
+Model:                                   80
+Thread(s) per core:                      1
+Core(s) per socket:                      4
+Socket(s):                               1
+Stepping:                                0
+BogoMIPS:                                3792.75</pre>
+                    
+                    <h3>🔹 CPU USAGE</h3>
+                    <div class="info-box">
+                        Current Usage: <strong>42.06%</strong>
+                    </div>
+                    
+                    <h3>🔹 RAM</h3>
+                    <table>
+                                                  <tr><th>total</th><th>used</th><th>free</th><th>shared</th><th>buff/cache</th><th>available</th></tr>
+                          <tr><td>Mem:</td><td>6.7Gi</td><td>597Mi</td><td>5.7Gi</td><td>1.8Mi</td><td>676Mi</td></tr>
+                    </table>
+                    
+                    <h3>🔹 DISK</h3>
+                    <table>
+                                                  <tr><th>Filesystem</th><th>Size</th><th>Used</th><th>Avail</th><th>Use%</th><th>Mounted</th></tr>
+                          <tr><td>tmpfs</td><td>689M</td><td>1.6M</td><td>687M</td><td>1%</td><td>/run</td></tr>
+                          <tr><td>/dev/sda2</td><td>60G</td><td>9.7G</td><td>47G</td><td>18%</td><td>/</td></tr>
+                          <tr><td>tmpfs</td><td>3.4G</td><td>0</td><td>3.4G</td><td>0%</td><td>/dev/shm</td></tr>
+                          <tr><td>tmpfs</td><td>5.0M</td><td>8.0K</td><td>5.0M</td><td>1%</td><td>/run/lock</td></tr>
+                          <tr><td>tmpfs</td><td>689M</td><td>80K</td><td>689M</td><td>1%</td><td>/run/user/1000</td></tr>
+                          <tr><td>tmpfs</td><td>689M</td><td>88K</td><td>689M</td><td>1%</td><td>/run/user/120</td></tr>
+                    </table>
+                    
+                    <h3>🔹 MOTHERBOARD & BIOS</h3>
+                    <table>
+                        <tr><th>BIOS Version</th><td>VirtualBox</td></tr>
+                        <tr><th>Motherboard Serial</th><td>VirtualBox</td></tr>
+                    </table>
+                    
+                    <h3>🔹 GPU</h3>
+                    <pre>00:02.0 VGA compatible controller: VMware SVGA II Adapter</pre>
+                    
+                    <h3>🔹 USB DEVICES</h3>
+                    <pre>/:  Bus 001.Port 001: Dev 001, Class=root_hub, Driver=ohci-pci/12p, 12M
+    |__ Port 001: Dev 002, If 0, Class=Human Interface Device, Driver=usbhid, 12M
+/:  Bus 002.Port 001: Dev 001, Class=root_hub, Driver=ehci-pci/12p, 480M</pre>
+                    
+                    <h3>🔹 MAC ADDRESSES</h3>
+                    <pre>08:00:27:70:ea:63 - ff:ff:ff:ff:ff:ff</pre>
+                </div>
+            </div>
+            
+            <!-- NETWORK INFORMATION -->
+            <div class="section">
+                <div class="section-title">🌐 NETWORK INFORMATION</div>
+                <div class="section-content">
+                    <h3>🔹 Network Interfaces</h3>
+                    <pre>1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    inet 127.0.0.1/8 scope host lo
+2: enp0s3: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel state UP group default qlen 1000
+    inet 10.120.60.236/24 brd 10.120.60.255 scope global noprefixroute enp0s3</pre>
+                    
+                    <h3>🔹 Open Ports (LISTEN)</h3>
+                    <pre>tcp   LISTEN 0      4096         0.0.0.0:22         0.0.0.0:*          
+tcp   LISTEN 0      4096   127.0.0.53%lo:53         0.0.0.0:*          
+tcp   LISTEN 0      4096      127.0.0.54:53         0.0.0.0:*          
+tcp   LISTEN 0      4096       127.0.0.1:631        0.0.0.0:*          
+tcp   LISTEN 0      4096            [::]:22            [::]:*          
+tcp   LISTEN 0      4096           [::1]:631           [::]:*          </pre>
+                    
+                    <h3>🔹 Active Connections</h3>
+                    <div class="info-box">
+                        Total active connections: <strong>13</strong>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- SOFTWARE INFORMATION -->
+            <div class="section">
+                <div class="section-title">💻 SOFTWARE INFORMATION</div>
+                <div class="section-content">
+                    <h3>🔹 SYSTEM</h3>
+                    <pre>Linux ubuntu24 6.17.0-19-generic #19~24.04.2-Ubuntu SMP PREEMPT_DYNAMIC Fri Mar  6 23:08:46 UTC 2 x86_64 x86_64 x86_64 GNU/Linux</pre>
+                    
+                    <h3>🔹 USERS</h3>
+                    <pre> 23:26:47 up 0 min,  3 users,  load average: 2.46, 0.54, 0.18
+USER     TTY      FROM             LOGIN@   IDLE   JCPU   PCPU  WHAT
+fateh_ha          10.120.60.207    23:26    8.00s  0.00s  0.06s sshd: fateh_hammiche [priv]
+gdm      tty1     -                23:26   13.00s  2.27s  1.97s /usr/bin/gnome-shell</pre>
+                    <div class="info-box">
+                        Number of users: <strong>0</strong>
+                    </div>
+                    
+                    <h3>🔹 INSTALLED PACKAGES</h3>
+                    <pre>Desired=Unknown/Install/Remove/Purge/Hold
+| Status=Not/Inst/Conf-files/Unpacked/halF-conf/Half-inst/trig-aWait/Trig-pend
+|/ Err?=(none)/Reinst-required (Status,Err: uppercase=bad)
+||/ Name                                          Version                                  Architecture Description
++++-=============================================-========================================-============-================================================================================
+ii  accountsservice                               23.13.9-2ubuntu6                         amd64        query and manipulate user account information
+ii  acl                                           2.3.2-1build1.1                          amd64        access control list - utilities
+ii  adduser                                       3.137ubuntu1                             all          add and remove users and groups
+ii  adwaita-icon-theme                            46.0-1                                   all          default icon theme of GNOME
+ii  alsa-base                                     1.0.25+dfsg-0ubuntu7                     all          ALSA driver configuration files
+ii  alsa-topology-conf                            1.2.5.1-2                                all          ALSA topology configuration files
+ii  alsa-ucm-conf                                 1.2.10-1ubuntu5.10                       all          ALSA Use Case Manager configuration files
+ii  alsa-utils                                    1.2.9-1ubuntu5                           amd64        Utilities for configuring and using ALSA
+ii  amd64-microcode                               3.20250311.1ubuntu0.24.04.1              amd64        Processor microcode firmware for AMD CPUs
+ii  anacron                                       2.3-39ubuntu2                            amd64        cron-like program that doesn't go by time</pre>
+                    <div class="info-box">
+                        Total packages: <strong>1538</strong>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- PERFORMANCE & PROCESSES -->
+            <div class="section">
+                <div class="section-title">⚡ PERFORMANCE & PROCESSES</div>
+                <div class="section-content">
+                    <h3>🔹 TOP 15 PROCESSES (by CPU)</h3>
+                    <table>
+                        <tr><th>USER</th><th>PID</th><th>%CPU</th><th>%MEM</th><th>COMMAND</th></tr>
+<tr><td>fateh_h+</td><td>1681</td><td>200</td><td>0.0</td><td>ps</td></tr>
+<tr><td>gdm</td><td>1416</td><td>70.6</td><td>1.2</td><td>/usr/bin/gnome-shell</td></tr>
+<tr><td>root</td><td>1</td><td>16.6</td><td>0.2</td><td>/sbin/init</td></tr>
+<tr><td>fateh_h+</td><td>1218</td><td>16.2</td><td>0.0</td><td>/snap/snapd-desktop-integration/361/usr/bin/snapd-desktop-integration</td></tr>
+<tr><td>root</td><td>627</td><td>13.2</td><td>0.5</td><td>/usr/lib/snapd/snapd</td></tr>
+<tr><td>fateh_h+</td><td>1194</td><td>8.9</td><td>0.1</td><td>/usr/lib/systemd/systemd</td></tr>
+<tr><td>gdm</td><td>1226</td><td>8.9</td><td>0.2</td><td>/usr/bin/wireplumber</td></tr>
+<tr><td>root</td><td>260</td><td>8.9</td><td>0.2</td><td>/usr/lib/systemd/systemd-journald</td></tr>
+<tr><td>gdm</td><td>1201</td><td>8.8</td><td>0.1</td><td>/usr/lib/systemd/systemd</td></tr>
+                    </table>
+                    
+                    <h3>🔹 I/O Statistics</h3>
+                    <pre>Linux 6.17.0-19-generic (ubuntu24) 	04/13/2026 	_x86_64_	(4 CPU)
+
+avg-cpu:  %user   %nice %system %iowait  %steal   %idle
+          11.80    0.00   43.30    5.14    0.00   39.76
+
+Device             tps    kB_read/s    kB_wrtn/s    kB_dscd/s    kB_read    kB_wrtn    kB_dscd
+loop0             0.59         0.72         0.00         0.00         17          0          0
+loop1             2.24        45.71         0.00         0.00       1082          0          0
+loop10           10.05        66.79         0.00         0.00       1581          0          0
+loop11            7.73        57.88         0.00         0.00       1370          0          0</pre>
+                </div>
+            </div>
+            
+            <!-- SECURITY INFORMATION -->
+            <div class="section">
+                <div class="section-title">🔒 SECURITY INFORMATION</div>
+                <div class="section-content">
+                    <h3>🔹 Current User</h3>
+                    <pre>fateh_hammiche</pre>
+                    
+                    <h3>🔹 Logged-in Users</h3>
+                    <pre></pre>
+                    
+                    <h3>🔹 Last Logins (last 5)</h3>
+                    <pre>reboot   system boot  6.17.0-19-generi Mon Apr 13 23:26   still running
+fateh_ha pts/1        10.120.60.207    Mon Apr 13 16:33 - 16:52  (00:19)
+fateh_ha tty2         tty2             Mon Apr 13 16:21 - crash  (07:05)
+fateh_ha seat0        login screen     Mon Apr 13 16:21 - crash  (07:05)
+reboot   system boot  6.17.0-19-generi Mon Apr 13 16:20   still running
+
+wtmp begins Sun Oct 19 19:57:47 2025</pre>
+                    
+                    <h3>🔹 Active SSH Connections</h3>
+                    <pre>1 active SSH connections</pre>
+                    
+                    <h3>🔹 Running Services</h3>
+                    <pre>  UNIT                              LOAD   ACTIVE SUB     DESCRIPTION
+  accounts-daemon.service           loaded active running Accounts Service
+  avahi-daemon.service              loaded active running Avahi mDNS/DNS-SD Stack
+  cron.service                      loaded active running Regular background program processing daemon
+  cups-browsed.service              loaded active running Make remote CUPS printers available locally
+  cups.service                      loaded active running CUPS Scheduler
+  dbus.service                      loaded active running D-Bus System Message Bus
+  gdm.service                       loaded active running GNOME Display Manager
+  gnome-remote-desktop.service      loaded active running GNOME Remote Desktop
+  kerneloops.service                loaded active running Tool to automatically collect and submit kernel crash signatures</pre>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <p>System Report | Generated by Automation Tool</p>
+        </div>
+    </div>
+</body>
+</html>

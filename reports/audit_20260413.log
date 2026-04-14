@@ -1,0 +1,68 @@
+[2026-04-13 00:34:28] [INFO] ========== SYSTEM AUDIT STARTED ==========
+[2026-04-13 00:34:28] [INFO] Checking requirements...
+[2026-04-13 00:34:28] [INFO] All requirements satisfied
+[2026-04-13 00:34:28] [INFO] Short report saved to: reports/short_report_20260413_003428.html
+[2026-04-13 00:34:30] [INFO] Full report saved to: reports/full_report_20260413_003428.html
+[2026-04-13 00:34:32] [SUCCESS] Short report sent to fatehhammiche7@gmail.com
+[2026-04-13 00:34:34] [SUCCESS] Full report sent to fatehhammiche7@gmail.com
+[2026-04-13 00:34:34] [INFO] Cleaning up old reports (older than 30 days)...
+[2026-04-13 00:34:34] [INFO] Cleanup completed
+[2026-04-13 00:34:34] [INFO] ========== SYSTEM AUDIT COMPLETED ==========
+[2026-04-13 16:42:01] [INFO] ========== SYSTEM AUDIT STARTED ==========
+[2026-04-13 16:42:01] [INFO] Checking requirements...
+[2026-04-13 16:42:01] [INFO] All requirements satisfied
+[2026-04-13 16:42:01] [INFO] Short report saved to: reports/short_report_20260413_164201.html
+[2026-04-13 16:42:03] [INFO] Full report saved to: reports/full_report_20260413_164201.html
+[2026-04-13 16:42:05] [SUCCESS] Short report sent to fatehhammiche7@gmail.com
+[2026-04-13 16:42:08] [SUCCESS] Full report sent to fatehhammiche7@gmail.com
+[2026-04-13 16:42:08] [INFO] Cleaning up old reports (older than 30 days)...
+[2026-04-13 16:42:08] [INFO] Cleanup completed
+[2026-04-13 16:42:08] [INFO] ========== SYSTEM AUDIT COMPLETED ==========
+[2026-04-13 16:52:01] [INFO] ========== SYSTEM AUDIT STARTED ==========
+[2026-04-13 16:52:01] [INFO] Checking requirements...
+[2026-04-13 16:52:01] [INFO] All requirements satisfied
+[2026-04-13 16:52:01] [INFO] Short report saved to: reports/short_report_20260413_165201.html
+[2026-04-13 16:52:03] [INFO] Full report saved to: reports/full_report_20260413_165201.html
+[2026-04-13 16:52:08] [SUCCESS] Short report sent to fatehhammiche7@gmail.com
+[2026-04-13 16:52:15] [SUCCESS] Full report sent to fatehhammiche7@gmail.com
+[2026-04-13 16:52:15] [INFO] Cleaning up old reports (older than 30 days)...
+[2026-04-13 16:52:15] [INFO] Cleanup completed
+[2026-04-13 16:52:15] [INFO] ========== SYSTEM AUDIT COMPLETED ==========
+[2026-04-13 21:40:14] [INFO] ========== SYSTEM AUDIT STARTED ==========
+[2026-04-13 21:40:14] [INFO] Checking requirements...
+[2026-04-13 21:40:14] [INFO] All requirements satisfied
+[2026-04-13 21:40:14] [INFO] Short report saved to: reports/short_report_20260413_214014.html
+[2026-04-13 21:40:14] [WARNING] wkhtmltopdf not found. Skipping PDF generation.
+[2026-04-13 21:40:16] [INFO] Full report saved to: reports/full_report_20260413_214014.html
+[2026-04-13 21:40:16] [WARNING] wkhtmltopdf not found. Skipping PDF generation.
+[2026-04-13 21:40:19] [SUCCESS] Short report sent to fatehhammiche7@gmail.com
+[2026-04-13 21:40:22] [SUCCESS] Full report sent to fatehhammiche7@gmail.com
+[2026-04-13 21:40:22] [INFO] Cleaning up old reports (older than 30 days)...
+[2026-04-13 21:40:22] [INFO] Cleanup completed
+[2026-04-13 21:40:22] [INFO] ========== SYSTEM AUDIT COMPLETED ==========
+[2026-04-13 21:45:41] [INFO] ========== SYSTEM AUDIT STARTED ==========
+[2026-04-13 21:45:41] [INFO] Checking requirements...
+[2026-04-13 21:45:41] [INFO] All requirements satisfied
+[2026-04-13 21:45:41] [INFO] Short report saved to: reports/short_report_20260413_214541.html
+[2026-04-13 21:45:41] [WARNING] wkhtmltopdf not found. Skipping PDF generation.
+[2026-04-13 21:45:42] [INFO] Full report saved to: reports/full_report_20260413_214541.html
+[2026-04-13 21:45:42] [WARNING] wkhtmltopdf not found. Skipping PDF generation.
+[2026-04-13 21:45:44] [SUCCESS] Short report sent to fatehhammiche7@gmail.com
+[2026-04-13 21:45:47] [SUCCESS] Full report sent to fatehhammiche7@gmail.com
+[2026-04-13 21:45:47] [INFO] Cleaning up old reports (older than 30 days)...
+[2026-04-13 21:45:47] [INFO] Cleanup completed
+[2026-04-13 21:45:47] [INFO] ========== SYSTEM AUDIT COMPLETED ==========
+[2026-04-13 22:01:55] [INFO] ========== SYSTEM AUDIT STARTED ==========
+[2026-04-13 22:01:55] [INFO] Checking requirements...
+[2026-04-13 22:01:55] [INFO] All requirements satisfied
+[2026-04-13 22:01:55] [INFO] Short report saved to: reports/short_report_20260413_220155.html
+[2026-04-13 22:01:55] [INFO] Converting short_report_20260413_220155.html to PDF...
+[2026-04-13 22:01:57] [SUCCESS] PDF successfully generated: reports/short_report_20260413_220155.pdf
+[2026-04-13 22:01:58] [INFO] Full report saved to: reports/full_report_20260413_220155.html
+[2026-04-13 22:01:58] [INFO] Converting full_report_20260413_220155.html to PDF...
+[2026-04-13 22:02:00] [SUCCESS] PDF successfully generated: reports/full_report_20260413_220155.pdf
+[2026-04-13 22:02:03] [SUCCESS] Short report sent to fatehhammiche7@gmail.com
+[2026-04-13 22:02:06] [SUCCESS] Full report sent to fatehhammiche7@gmail.com
+[2026-04-13 22:02:06] [INFO] Cleaning up old reports (older than 30 days)...
+[2026-04-13 22:02:06] [INFO] Cleanup completed
+[2026-04-13 22:02:06] [INFO] ========== SYSTEM AUDIT COMPLETED ==========

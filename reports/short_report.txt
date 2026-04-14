@@ -1,0 +1,17 @@
+=====[47m[1;36mSHORT REPORT[0m =====
+Date: Sun Apr 12 10:53:48 PM CET 2026
+--- CPU ---
+Architecture:                            x86_64
+CPU op-mode(s):                          32-bit, 64-bit
+Address sizes:                           48 bits physical, 48 bits virtual
+Byte Order:                              Little Endian
+CPU(s):                                  6
+--- RAM ---
+               total        used        free      shared  buff/cache   available
+Mem:           5.7Gi       2.6Gi       2.1Gi       230Mi       1.5Gi       3.1Gi
+--- DISK ---
+Filesystem      Size  Used Avail Use% Mounted on
+udev            2.8G     0  2.8G   0% /dev
+tmpfs           586M  1.1M  585M   1% /run
+/dev/sda1        50G   25G   23G  52% /
+tmpfs           2.9G  129M  2.8G   5% /dev/shm
